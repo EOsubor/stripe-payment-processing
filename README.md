@@ -42,12 +42,14 @@ Verify that the payment was successful by checking the Stripe dashboard.
 
 ### Code Structure
 
-The code consists of a single Flask app (`app.py`) with a single route (`/charge`). The route expects a POST request with the following parameters:
+The code consists of a single Flask app (`app.py`) with a single route (`/charge`). 
 
-`amount`: The amount to charge in cents.
-`currency`: The currency of the payment (e.g. `usd`).
-`description`: A description of the payment.
-`token`: A Stripe token representing the payment source (e.g. a credit card).
+The route expects a POST request with the following parameters:
+
+- `amount`: The amount to charge in cents.
+- `currency`: The currency of the payment (e.g. `usd`).
+- `description`: A description of the payment.
+- `token`: A Stripe token representing the payment source (e.g. a credit card).
 
 If the payment is successful, the route returns a JSON response with the message "Payment processed successfully". If the payment fails, the route returns a JSON response with an error message.
 
